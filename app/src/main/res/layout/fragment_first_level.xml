@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/FirstLevelFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    tools:context=".FragmentFirstLevel">
+
+    <ImageButton
+        android:id="@+id/pinkButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/teal_700"
+        android:src="@drawable/circle"
+        android:tint="@color/pink"
+        app:layout_constraintBottom_toTopOf="@+id/greenButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription"/>
+
+    <ImageButton
+        android:id="@+id/greenButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/teal_700"
+        android:src="@drawable/circle"
+        android:tint="@color/green"
+        app:layout_constraintBottom_toTopOf="@+id/redButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription"/>
+
+    <ImageButton
+        android:id="@+id/redButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/teal_700"
+        android:src="@drawable/circle"
+        android:tint="@color/red"
+        app:layout_constraintBottom_toTopOf="@+id/yellowButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription"/>
+
+    <ImageButton
+        android:id="@+id/yellowButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="50dp"
+        android:background="@color/teal_700"
+        android:src="@drawable/circle"
+        android:tint="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription"/>
+
+    <ImageButton
+        android:id="@+id/helpButton3"
+        android:layout_width="85dp"
+        android:layout_height="102dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/help_ready"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/backButton3"
+        android:layout_width="102dp"
+        android:layout_height="102dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/back_ready"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/nextButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:src="@android:drawable/ic_media_ff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription"/>
+
+    <ImageButton
+        android:id="@+id/repeatButton1"
+        android:layout_width="102dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/replay_ready"
+        app:layout_constraintEnd_toStartOf="@+id/helpButton3"
+        app:layout_constraintStart_toEndOf="@+id/backButton3"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

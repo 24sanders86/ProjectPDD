@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ThirdLevelFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    tools:context=".FragmentThirdLevel" >
+
+    <ImageButton
+        android:id="@+id/helpButton3"
+        android:layout_width="85dp"
+        android:layout_height="102dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/help_ready"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/backButton3"
+        android:layout_width="102dp"
+        android:layout_height="102dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/back_ready"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <CheckBox
+        android:id="@+id/wrongSignCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="116dp"
+        android:drawableBottom="@drawable/wrong_sign_ready"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/rightSignCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:drawableBottom="@drawable/right_sign_ready"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toEndOf="@+id/wrongSignCheckBox"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/perehodCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:drawableBottom="@drawable/perehod3_ready"
+        app:layout_constraintBottom_toTopOf="@+id/noPerehodCheckBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/noPerehodCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="92dp"
+        android:drawableBottom="@drawable/no_perehod3_ready"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/nextButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:src="@android:drawable/ic_media_ff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription"/>
+
+    <Button
+        android:id="@+id/checkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/check"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nextButton3"
+        app:layout_constraintHorizontal_bias="0.668"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/repeatButton3"
+        android:layout_width="102dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/replay_ready"
+        app:layout_constraintEnd_toStartOf="@+id/helpButton3"
+        app:layout_constraintStart_toEndOf="@+id/backButton3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

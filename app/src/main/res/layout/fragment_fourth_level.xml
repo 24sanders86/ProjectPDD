@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/FourthLevelFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    tools:context=".FragmentFourthLevel">
+
+    <ImageButton
+        android:id="@+id/backButton4"
+        android:layout_width="102dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/back_ready"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/helpButton4"
+        android:layout_width="102dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/help_ready"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/childAloneButton"
+        android:layout_width="185dp"
+        android:layout_height="270dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:src="@drawable/child_alone_ready"
+        app:layout_constraintBottom_toTopOf="@+id/childWithAdultButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.875"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/childWithAdultWrongButton"
+        android:layout_width="185dp"
+        android:layout_height="270dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:src="@drawable/child_with_adult_no_perehod_ready"
+        app:layout_constraintBottom_toTopOf="@+id/childWithChildButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.875"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/childWithAdultButton"
+        android:layout_width="185dp"
+        android:layout_height="270dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginBottom="60dp"
+        android:src="@drawable/child_with_adult_ready"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/childWithChildButton"
+        android:layout_width="185dp"
+        android:layout_height="270dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="60dp"
+        android:src="@drawable/child_with_child_ready"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/nextButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:src="@android:drawable/ic_media_ff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/repeatButton4"
+        android:layout_width="102dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/replay_ready"
+        app:layout_constraintEnd_toStartOf="@+id/helpButton4"
+        app:layout_constraintStart_toEndOf="@+id/backButton4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

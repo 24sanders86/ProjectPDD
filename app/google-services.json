@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "553015251009",
+    "project_id": "projectpdd-61788",
+    "storage_bucket": "projectpdd-61788.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:553015251009:android:3923e6ea384632af1876c0",
+        "android_client_info": {
+          "package_name": "com.example.pdd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "553015251009-1kv0fgt3478p0jqe4c65j1snqj1lpm6n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfoPYtllqXCCk70ISYxpP8VKPVyulX618"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "553015251009-1kv0fgt3478p0jqe4c65j1snqj1lpm6n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
