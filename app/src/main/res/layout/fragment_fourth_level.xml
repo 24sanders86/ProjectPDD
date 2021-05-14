@@ -12,9 +12,9 @@
         android:id="@+id/backButton4"
         android:layout_width="102dp"
         android:layout_height="102dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="7dp"
         android:src="@drawable/back_ready"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -25,8 +25,8 @@
         android:layout_width="102dp"
         android:layout_height="102dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:src="@drawable/help_ready"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -38,11 +38,10 @@
         android:layout_height="270dp"
         android:layout_marginStart="6dp"
         android:layout_marginLeft="6dp"
-        android:src="@drawable/child_alone_ready"
         app:layout_constraintBottom_toTopOf="@+id/childWithAdultButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.875"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="ContentDescription" />
 
     <ImageButton
@@ -51,11 +50,10 @@
         android:layout_height="270dp"
         android:layout_marginEnd="6dp"
         android:layout_marginRight="6dp"
-        android:src="@drawable/child_with_adult_no_perehod_ready"
         app:layout_constraintBottom_toTopOf="@+id/childWithChildButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.875"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="ContentDescription" />
 
     <ImageButton
@@ -64,8 +62,7 @@
         android:layout_height="270dp"
         android:layout_marginStart="6dp"
         android:layout_marginLeft="6dp"
-        android:layout_marginBottom="60dp"
-        android:src="@drawable/child_with_adult_ready"
+        android:layout_marginBottom="55dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="ContentDescription" />
@@ -76,8 +73,7 @@
         android:layout_height="270dp"
         android:layout_marginEnd="6dp"
         android:layout_marginRight="6dp"
-        android:layout_marginBottom="60dp"
-        android:src="@drawable/child_with_child_ready"
+        android:layout_marginBottom="55dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="ContentDescription" />
@@ -97,7 +93,7 @@
         android:id="@+id/repeatButton4"
         android:layout_width="102dp"
         android:layout_height="102dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/replay_ready"
         app:layout_constraintEnd_toStartOf="@+id/helpButton4"
         app:layout_constraintStart_toEndOf="@+id/backButton4"

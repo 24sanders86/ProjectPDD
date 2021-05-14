@@ -1,64 +1,90 @@
 package com.example.pdd;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link FragmentFifthLevel#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.bumptech.glide.Glide;
+
+
 public class FragmentFifthLevel extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public FragmentFifthLevel() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment FragmentFifthLevel.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static FragmentFifthLevel newInstance(String param1, String param2) {
-        FragmentFifthLevel fragment = new FragmentFifthLevel();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fifth_level, container, false);
+
+        View rootView =  inflater.inflate(R.layout.fragment_last_levels, container, false);
+
+        ((MainActivity)getActivity()).changeLevel("5");
+
+        ImageButton backButton = rootView.findViewById(R.id.backButton);
+        ImageButton helpButton = rootView.findViewById(R.id.helpButton);
+        ImageButton repeatButton = rootView.findViewById(R.id.repeatButton);
+        ImageButton roadButton = rootView.findViewById(R.id.topButton);
+        ImageButton peshehodButton = rootView.findViewById(R.id.bottomButton);
+        ImageButton nextButton = rootView.findViewById(R.id.nextButton);
+        nextButton.setVisibility(rootView.INVISIBLE);
+
+        MediaPlayer question = MediaPlayer.create(getContext(), R.raw.peshehodi);
+        question.start();
+        MediaPlayer wrong = MediaPlayer.create(getContext(), R.raw.think);
+        MediaPlayer rightAnswer = MediaPlayer.create(getContext(),R.raw.peshehodianswer);
+
+        String url = "https://firebasestorage.googleapis.com/v0/b/projectpdd-61788.appspot.com/o/road_ready.jpg?alt=media&token=d1463b5d-114f-48ac-a8d2-fd1f14b4fceb";
+        Glide.with(FragmentFifthLevel.this).load(url).into(roadButton);
+
+        url = "https://firebasestorage.googleapis.com/v0/b/projectpdd-61788.appspot.com/o/peshehodnay_ready.jpg?alt=media&token=5ae4cdb6-4f69-43e5-8351-aefc74972328";
+        Glide.with(FragmentFifthLevel.this).load(url).into(peshehodButton);
+
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+
+        roadButton.setOnClickListener(v -> {
+            question.stop();
+            rightAnswer.stop();
+            wrong.start();
+        });
+
+        peshehodButton.setOnClickListener(v -> {
+            rightAnswer.start();
+            question.stop();
+            wrong.stop();
+            nextButton.setVisibility(rootView.VISIBLE);
+        });
+
+        nextButton.setOnClickListener(v -> {
+            question.stop();
+            wrong.stop();
+            rightAnswer.stop();
+            ft.replace(R.id.LastLevelsFragment, new FragmentSixthLevel());
+            ft.commit();
+        });
+
+        backButton.setOnClickListener(v -> {
+            question.stop();
+            wrong.stop();
+            rightAnswer.stop();
+            ft.replace(R.id.LastLevelsFragment, new StartFragment());
+            ft.commit();
+        });
+
+        repeatButton.setOnClickListener(v -> {
+            question.start();
+            wrong.stop();
+            rightAnswer.stop();
+        });
+
+        helpButton.setOnClickListener(v -> (new FragmentHelp()).show(getFragmentManager(), "FragmentHelp"));
+
+
+        return rootView;
     }
 }

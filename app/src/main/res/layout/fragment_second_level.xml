@@ -10,27 +10,27 @@
 
     <ImageButton
         android:id="@+id/outOfWindow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:src="@drawable/iz_okna_ready"
+        android:layout_width="250dp"
+        android:layout_height="270dp"
+        android:layout_marginBottom="28dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.267"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/inWindow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="270dp"
         android:layout_marginTop="120dp"
-        android:src="@drawable/v_okne_man_ready"
         app:layout_constraintBottom_toTopOf="@+id/outOfWindow"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.776"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ContentDescription"/>
+        app:layout_constraintVertical_bias="0.512"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/helpButton2"
@@ -38,8 +38,8 @@
         android:layout_height="102dp"
         android:layout_gravity="end"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:src="@drawable/help_ready"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -50,9 +50,9 @@
         android:layout_width="102dp"
         android:layout_height="102dp"
         android:layout_gravity="start"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="7dp"
         android:src="@drawable/back_ready"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -62,18 +62,19 @@
         android:id="@+id/nextButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
         android:src="@android:drawable/ic_media_ff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.966"
+        app:layout_constraintHorizontal_bias="0.943"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="ContentDescription"/>
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/repeatButton2"
         android:layout_width="102dp"
         android:layout_height="102dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/replay_ready"
         app:layout_constraintEnd_toStartOf="@+id/helpButton2"
         app:layout_constraintStart_toEndOf="@+id/backButton2"

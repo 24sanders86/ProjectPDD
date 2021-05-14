@@ -7,28 +7,19 @@ import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
+    private String k = "1";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //ImageButton imageButton = findViewById(R.id.imageButton);
-        //imageButton.setOnClickListener(v -> {
-
-       // });
-
     }
 
-    /*@Override
-    public void onBackPressed() {
+    public String getLevel(){
+        return this.k;
+    }
 
-        int count = getFragmentManager().getBackStackEntryCount();
-
-        if (count == 0) {
-            super.onBackPressed();
-            //additional code
-        } else {
-            getFragmentManager().popBackStack();
-        }
-
-    }*/
+    public void changeLevel(String k1){
+        this.k = k1;
+    }
 }

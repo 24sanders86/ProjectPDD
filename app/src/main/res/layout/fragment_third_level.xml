@@ -9,26 +9,26 @@
     tools:context=".FragmentThirdLevel" >
 
     <ImageButton
-        android:id="@+id/helpButton3"
+        android:id="@+id/helpButton1"
         android:layout_width="85dp"
         android:layout_height="102dp"
         android:layout_gravity="end"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:src="@drawable/help_ready"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />
 
     <ImageButton
-        android:id="@+id/backButton3"
+        android:id="@+id/backButton1"
         android:layout_width="102dp"
         android:layout_height="102dp"
         android:layout_gravity="start"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="7dp"
         android:src="@drawable/back_ready"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -82,13 +82,13 @@
         android:id="@+id/nextButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="16dp"
         android:src="@android:drawable/ic_media_ff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintHorizontal_bias="0.873"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="ContentDescription"/>
+        tools:ignore="ContentDescription" />
 
     <Button
         android:id="@+id/checkButton"
@@ -98,17 +98,17 @@
         android:text="@string/check"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/nextButton3"
-        app:layout_constraintHorizontal_bias="0.668"
+        app:layout_constraintHorizontal_bias="0.772"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/repeatButton3"
         android:layout_width="102dp"
         android:layout_height="102dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/replay_ready"
-        app:layout_constraintEnd_toStartOf="@+id/helpButton3"
-        app:layout_constraintStart_toEndOf="@+id/backButton3"
+        app:layout_constraintEnd_toStartOf="@+id/helpButton1"
+        app:layout_constraintStart_toEndOf="@+id/backButton1"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

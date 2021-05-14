@@ -1,5 +1,6 @@
 package com.example.pdd;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -22,35 +23,46 @@ public class FragmentThirdLevel extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_third_level, container, false);
 
+        ((MainActivity)getActivity()).changeLevel("3");
+
         FragmentManager fm = getFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
 
-        ImageButton backButton = rootView.findViewById(R.id.backButton3);
+        MediaPlayer question = MediaPlayer.create(getContext(), R.raw.road);
+        question.start();
+
+        MediaPlayer wellDone = MediaPlayer.create(getContext(),R.raw.roadclick);
+
+        ImageButton backButton = rootView.findViewById(R.id.backButton1);
         backButton.setOnClickListener(v -> {
+            question.stop();
+            wellDone.stop();
             ft.replace(R.id.ThirdLevelFragment, new StartFragment());
             ft.commit();
         });
 
-        ImageButton helpButton = rootView.findViewById(R.id.helpButton3);
-        helpButton.setOnClickListener(v -> (new FragmentHelpThirdLevel()).show(getFragmentManager(), "FragmentHelpThirdLevel"));
+        ImageButton helpButton = rootView.findViewById(R.id.helpButton1);
+        helpButton.setOnClickListener(v -> (new FragmentHelp()).show(getFragmentManager(), "FragmentHelp"));
 
         CheckBox perehod = rootView.findViewById(R.id.perehodCheckBox);
         CheckBox rightSign = rootView.findViewById(R.id.rightSignCheckBox);
         CheckBox noPerehod = rootView.findViewById(R.id.noPerehodCheckBox);
         CheckBox wrongSign = rootView.findViewById(R.id.wrongSignCheckBox);
 
+
         ImageButton nextButton = rootView.findViewById(R.id.nextButton3);
-        nextButton.setEnabled(false);
         nextButton.setVisibility(rootView.INVISIBLE);
 
         ImageButton repeatButton = rootView.findViewById(R.id.repeatButton3);
         repeatButton.setOnClickListener(v -> {
-            //repeat question
+            question.start();
         });
 
         Button checkButton = rootView.findViewById(R.id.checkButton);
 
         nextButton.setOnClickListener(v -> {
+            wellDone.stop();
+            question.stop();
             ft.replace(R.id.ThirdLevelFragment, new FragmentFourthLevel());
             ft.commit();
             checkButton.setVisibility(rootView.INVISIBLE);
@@ -61,8 +73,7 @@ public class FragmentThirdLevel extends Fragment {
         checkButton.setOnClickListener(v -> {
             if (perehod.isChecked() && rightSign.isChecked()
                     && !noPerehod.isChecked() && !wrongSign.isChecked()) {
-                //sound
-                nextButton.setEnabled(true);
+                wellDone.start();
                 nextButton.setVisibility(rootView.VISIBLE);
             }
         });

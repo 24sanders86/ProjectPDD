@@ -4,4 +4,6 @@
     <string name="check">Проверить</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="play">ИГРАТЬ</string>
+    <string name="see_u_soon">ДО СКОРОЙ ВСТРЕЧИ!</string>
 </resources>
