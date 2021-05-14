@@ -27,7 +27,7 @@ public class EndFragment extends Fragment {
 
         ImageView img = rootView.findViewById(R.id.imageView2);
 
-        String url = "https://firebasestorage.googleapis.com/v0/b/projectpdd-61788.appspot.com/o/girl_ready.png?alt=media&token=97cfa4e3-5c0f-49fa-bf10-a0c0ce1971ef";
+        String url = "https://firebasestorage.googleapis.com/v0/b/projectpdd-61788.appspot.com/o/girl_ready.png?alt=media&token=18414c5c-d39c-4503-be60-f87dde18cb25";
         Glide.with(EndFragment.this).load(url).into(img);
 
         return rootView;

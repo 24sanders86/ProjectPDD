@@ -32,10 +32,6 @@ public class StartFragment extends Fragment {
 
         ImageView img = rootView.findViewById(R.id.butterfly);
 
-        MediaPlayer backSong = MediaPlayer.create(getContext(), R.raw.background);
-        backSong.start();
-        backSong.setVolume(0,10);
-
         MediaPlayer privet = MediaPlayer.create(getContext(), R.raw.privet);
         privet.start();
         privet.setVolume(50,100);
