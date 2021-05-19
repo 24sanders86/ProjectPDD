@@ -33,9 +33,12 @@ public class FragmentThirdLevel extends Fragment {
 
         MediaPlayer wellDone = MediaPlayer.create(getContext(),R.raw.roadclick);
 
+        Button checkButton = rootView.findViewById(R.id.checkButton);
+
         ImageButton backButton = rootView.findViewById(R.id.backButton1);
         backButton.setOnClickListener(v -> {
             question.stop();
+            checkButton.setVisibility(rootView.INVISIBLE);
             wellDone.stop();
             ft.replace(R.id.ThirdLevelFragment, new StartFragment());
             ft.commit();
@@ -58,7 +61,7 @@ public class FragmentThirdLevel extends Fragment {
             question.start();
         });
 
-        Button checkButton = rootView.findViewById(R.id.checkButton);
+
 
         nextButton.setOnClickListener(v -> {
             wellDone.stop();
